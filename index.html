@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Toggle</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+  <style>
+    /* Custom background color for the navbar */
+    .navbar-bg {
+      background-color: #f19225;
+    }
+    /* styles.css */
+#home {
+    background-image: url('./img/logo.jpg');
+  }
+  #subscribe{
+    background-image: url('./img/suscribe.png');
+  }
+  </style>
+</head>
+<body class="">
+  <nav class="navbar-bg border-gray-200 dark:bg-[#f19225]">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/minilogo.jpeg" class="h-8" alt="Mini Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ebook Library</span>
+      </a>
+      <div class="flex md:order-2">
+        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+          <span class="sr-only">Search</span>
+        </button>
+        <div class="hidden md:block">
+            
+          <input type="text" id="search-navbar" class="block w-full p-2  text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        </div>
+        <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[#f19225] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#f19225]  dark:border-gray-700">
+          <li><a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Books</a></li>
+          <li><a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Articles</a></li>
+          <li><a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Samples</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="bg-transparent flex flex-col items-center justify-center min-h-[600px] px-4 py-8">
+    <h1 class="text-black text-3xl md:text-5xl font-bold mb-4 text-center">Welcome to our online library</h1>
+    <p class="text-[#622929] text-base md:text-lg mb-6 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqus.</p>
+    <button class=" bg-[#622929] text-white border border-white py-2 px-4 rounded-lg hover:bg-opacity-90">Read Now</button>
+  </section>
+
+  <section class="py-12 bg-gray-100">
+    <h1 class="text-3xl font-bold text-center mb-8">General Services</h1>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-lg shadow-lg flex flex-col">
+                <img src="img/book1.jpg" alt="Books" class="w-full h-80 object-cover rounded-t-lg mb-4">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-semibold text-center mb-4">Books</h2>
+                    <p class="text-gray-700 text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-lg shadow-lg flex flex-col">
+                <img src="img/article.jpg" alt="Articles" class="w-full h-80 object-cover rounded-t-lg mb-4">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-semibold text-center mb-4">Articles</h2>
+                    <p class="text-gray-700 text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-lg shadow-lg flex flex-col">
+                <img src="img/samples.jpg" alt="Free Samples" class="w-full h-80 object-cover rounded-t-lg mb-4">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-semibold text-center mb-4">Free Samples</h2>
+                    <p class="text-gray-700 text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="subscribe" class="py-12 bg-gray-100">
+    <h1 class="text-3xl font-bold text-center mb-8">Subscribe for More</h1>
+    <div id="subscribe-box" class="max-w-lg mx-auto px-4">
+        <form action="" class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone No:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your Phone No" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mb-4">
+                <button type="submit" class="w-full bg-[#622929] text-white border border-white py-2 px-4 rounded-lg hover:bg-opacity-90 ">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="bg-gray-800 text-white py-4">
+    <div class="text-center">
+        <p>&copy; 2024 www.freeebooklibrary. All rights reserved!</p>
+    </div>
+</footer>
+
+
+  
+  <script>
+    document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('aria-controls');
+        const targetElement = document.getElementById(targetId);
+        const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+
+        button.setAttribute('aria-expanded', !expanded);
+        targetElement.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
